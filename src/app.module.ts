@@ -9,10 +9,13 @@ import { ConfigModule } from '@nestjs/config';
 import { PaymentsModule } from './payments/payments.module';
 import { APP_INTERCEPTOR } from '@nestjs/core';
 import { EncryptInterceptor } from "./interceptors/encrypt.interceptor";
+import { ScheduleModule } from '@nestjs/schedule';
+import { TasksModule } from './tasks/tasks.module';
 
 @Module({
   imports: [
     UsersModule,
+    ScheduleModule.forRoot(),
     ConfigModule.forRoot(),
     MongooseModule.forRoot(
       process.env['DATABASE_URL'] ?? ""
@@ -20,6 +23,7 @@ import { EncryptInterceptor } from "./interceptors/encrypt.interceptor";
     PortfolioModule,
     PictureModule,
     PaymentsModule,
+    TasksModule
   ],
   controllers: [AppController],
   providers: [AppService,
