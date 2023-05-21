@@ -8,7 +8,6 @@ export class TasksService {
 
     @Interval(180000)
     async handleInterval() {
-        // axios.get("https://premium-apk-and-codes-nest-2023.onrender.com/");
         try {
             const response = await axios.get('https://art-portfolio-backend.onrender.com');
             console.log('Server Start', response.data);
