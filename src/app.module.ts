@@ -15,15 +15,15 @@ import { TasksModule } from './tasks/tasks.module';
 @Module({
   imports: [
     UsersModule,
-    ScheduleModule.forRoot(),
+    // ScheduleModule.forRoot(),
     ConfigModule.forRoot(),
     MongooseModule.forRoot(
-      process.env['DATABASE_URL'] ?? ""
+      process.env.DATABASE_URL ?? ""
     ),
     PortfolioModule,
     PictureModule,
     PaymentsModule,
-    TasksModule
+    // TasksModule
   ],
   controllers: [AppController],
   providers: [AppService,

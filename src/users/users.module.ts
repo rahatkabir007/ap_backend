@@ -12,7 +12,7 @@ import { Portfolio, PortfolioSchema } from "src/portfolio/schemas/portfolio.sche
 @Module({
   imports: [MongooseModule.forFeature([{ name: User.name, schema: UserSchema }, { name: Picture.name, schema: PictureSchema }, { name: Portfolio.name, schema: PortfolioSchema }]), PassportModule,
   JwtModule.register({
-    secret: `${process.env['JWT_SECRET_KEY']}`,
+    secret: `${process.env.JWT_SECRET_KEY}`,
     signOptions: { expiresIn: '3000s' },
   }),],
   controllers: [UsersController],

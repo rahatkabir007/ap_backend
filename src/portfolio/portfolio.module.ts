@@ -19,7 +19,7 @@ import { JwtModule } from "@nestjs/jwt";
     MongooseModule.forFeature([{ name: Picture.name, schema: PictureSchema }]),
     MongooseModule.forFeature([{ name: User.name, schema: UserSchema }]),
     JwtModule.register({
-      secret: `${process.env['JWT_SECRET_KEY']}`,
+      secret: `${process.env.JWT_SECRET_KEY}`,
       signOptions: { expiresIn: '3000s' },
     })
   ],
