@@ -4,12 +4,12 @@ import { FlattenMaps, Model } from 'mongoose';
 import { LoginUserDto } from './dto/login-user.dto';
 import { User, UserDocument } from './schemas/user.schema';
 import { JwtService } from '@nestjs/jwt';
-import { TokenVerifier } from 'src/utils/TokenVerifier';
+import { TokenVerifier } from '../utils/TokenVerifier';
 import { TestLoginUserDto } from './dto/testLogin-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
-import { Portfolio, PortfolioDocument } from 'src/portfolio/schemas/portfolio.schema';
-import { Picture, PictureDocument } from 'src/picture/schemas/picture.schema';
-import { Utils } from 'src/utils/Utils';
+import { Portfolio, PortfolioDocument } from '../portfolio/schemas/portfolio.schema';
+import { Picture, PictureDocument } from '../picture/schemas/picture.schema';
+import { Utils } from '../utils/Utils';
 
 
 

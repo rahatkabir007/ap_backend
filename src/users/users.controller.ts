@@ -1,4 +1,4 @@
-import { User } from 'src/users/schemas/user.schema';
+import { User } from './schemas/user.schema';
 import { Controller, Get, Post, Body, Request, Delete, UseGuards, Put } from '@nestjs/common';
 import { UsersService } from './users.service';
 import { LoginUserDto } from './dto/login-user.dto';

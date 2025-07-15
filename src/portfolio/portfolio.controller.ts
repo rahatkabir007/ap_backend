@@ -4,7 +4,7 @@ import { CreatePortfolioDto } from './dto/create-portfolio.dto';
 import { UpdatePortfolioDto } from './dto/update-portfolio.dto';
 import { AuthGuard } from "@nestjs/passport";
 import { QueryDto } from './dto/query.dto';
-import { User } from 'src/users/schemas/user.schema';
+import { User } from '../users/schemas/user.schema';
 
 export interface IUser extends User {
   _id: string
